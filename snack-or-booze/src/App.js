@@ -36,7 +36,8 @@ function App() {
             <Route exact path="/">
               <Home snacks={snacks} />
             </Route>
-
+            
+            {/** Snacks Routes */}
             <Route exact path="/snacks">
               <Menu items={snacks} resource="snacks" title="Food" />
             </Route>
@@ -44,13 +45,15 @@ function App() {
               <MenuItem items={snacks} cantFind="/snacks" />
             </Route>
 
+            {/** Drinks Routes */}
             <Route exact path="/drinks">
               <Menu items={drinks} resource="drinks" title="Drinks" />
             </Route>
             <Route path="/drinks/:id">
               <MenuItem items={drinks} cantFind="/drinks" />
             </Route>
-
+            
+            {/** Not Found */}
             <Route>
               <p>Hmmm. I can't seem to find what you want.</p>
             </Route>
