@@ -11,11 +11,13 @@ import MenuItem from "./MenuItem";
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [snacks, setSnacks] = useState([]);
+  const [drinks, setDrinks] = useState([]);
 
   useEffect(() => {
     async function getSnacks() {
-      let snacks = await SnackOrBoozeApi.getSnacks();
+      let {snacks , drinks} = await SnackOrBoozeApi.getSnacks();
       setSnacks(snacks);
+      setSnacks(drinks);
       setIsLoading(false);
     }
     getSnacks();
@@ -35,7 +37,7 @@ function App() {
               <Home snacks={snacks} />
             </Route>
             <Route exact path="/snacks">
-              <Menu items={snacks} resource="snacks" title="Snacks" />
+              <Menu items={snacks} resource="snacks" title="Food" />
             </Route>
             <Route path="/snacks/:id">
               <MenuItem items={snacks} cantFind="/snacks" />

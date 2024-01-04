@@ -16,7 +16,7 @@ function Menu({ items, title, resource }) {
       <Card>
         <CardBody>
           <CardTitle className="font-weight-bold text-center">
-            {title}
+            {title} Menu
           </CardTitle>
           <CardText>
             Some quick example text to build on the card title and make up the
