@@ -6,7 +6,7 @@ import SnackOrBoozeApi from "./Api";
 import NavBar from "./NavBar";
 import { Route, Switch } from "react-router-dom";
 import Menu from "./FoodMenu";
-import Snack from "./FoodItem";
+import MenuItem from "./MenuItem";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -38,7 +38,7 @@ function App() {
               <Menu snacks={snacks} title="Snacks" />
             </Route>
             <Route path="/snacks/:id">
-              <Snack items={snacks} cantFind="/snacks" />
+              <MenuItem items={snacks} cantFind="/snacks" />
             </Route>
             <Route>
               <p>Hmmm. I can't seem to find what you want.</p>
