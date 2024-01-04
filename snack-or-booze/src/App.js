@@ -15,7 +15,7 @@ function App() {
 
   useEffect(() => {
     async function getSnacks() {
-      let {snacks , drinks} = await SnackOrBoozeApi.getSnacks();
+      let {snacks , drinks} = await SnackOrBoozeApi.getItems();
       setSnacks(snacks);
       setDrinks(drinks);
       setIsLoading(false);
@@ -52,7 +52,7 @@ function App() {
             <Route path="/drinks/:id">
               <MenuItem items={drinks} cantFind="/drinks" />
             </Route>
-            
+
             {/** Not Found */}
             <Route>
               <p>Hmmm. I can't seem to find what you want.</p>

@@ -50,6 +50,20 @@
       "description": "Tart and delicious.",
       "recipe": "Mix arugula, toasted walnuts, and thinly-sliced Parmesan cheese. Dress with lemon and olive oil.",
       "serve": "Place on tiny, precious little plates."
+    },
+    {
+      "id": "pulled-pork-sandwich",
+      "name": "Pulled-Pork-Sandwich",
+      "description": "Juicy and Saucy on a Toasted Bun",
+      "recipe": "Put pulled pork on bun. Lather barbecue sauce.",
+      "serve": "Place on plate with side of pickles."
+    },
+    {
+      "name": "Fried Pickles",
+      "description": "Gross",
+      "recipe": "Fry'em up!",
+      "serve": "Give them to your wife that likes them.",
+      "id": "TWlME_5"
     }
   ]
 }

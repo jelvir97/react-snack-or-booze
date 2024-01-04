@@ -15,6 +15,9 @@ function NavBar() {
           <NavItem>
             <NavLink to="/snacks">Snacks</NavLink>
           </NavItem>
+          <NavItem>
+            <NavLink to="/drinks">Drinks</NavLink>
+          </NavItem>
         </Nav>
       </Navbar>
     </div>
