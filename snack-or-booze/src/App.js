@@ -17,7 +17,7 @@ function App() {
     async function getSnacks() {
       let {snacks , drinks} = await SnackOrBoozeApi.getSnacks();
       setSnacks(snacks);
-      setSnacks(drinks);
+      setDrinks(drinks);
       setIsLoading(false);
     }
     getSnacks();
@@ -36,12 +36,21 @@ function App() {
             <Route exact path="/">
               <Home snacks={snacks} />
             </Route>
+
             <Route exact path="/snacks">
               <Menu items={snacks} resource="snacks" title="Food" />
             </Route>
             <Route path="/snacks/:id">
               <MenuItem items={snacks} cantFind="/snacks" />
             </Route>
+
+            <Route exact path="/drinks">
+              <Menu items={drinks} resource="drinks" title="Drinks" />
+            </Route>
+            <Route path="/drinks/:id">
+              <MenuItem items={drinks} cantFind="/drinks" />
+            </Route>
+
             <Route>
               <p>Hmmm. I can't seem to find what you want.</p>
             </Route>
