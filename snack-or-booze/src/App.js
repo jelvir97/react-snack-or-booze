@@ -21,8 +21,7 @@ function App() {
     getSnacks();
   }, [items]);
 
-  const addItem = async(evt, formData)=>{
-    evt.preventDefault()
+  const addItem = async(formData)=>{
     const {data} = await SnackOrBoozeApi.addItem(formData)
     console.log(data)
     const newItem = {name:data.name, description:data.description, recipe:data.recipe, serve:data.serve}
@@ -45,7 +44,7 @@ function App() {
         <main>
           <Routes>
             <Route exact path="/" 
-              element={<Home snacks={items.snacks} />}
+              element={<Home items={items} />}
             />
             
             {/** Snacks Routes */}

@@ -24,12 +24,13 @@ const AddItemForm = ({ items, addItem}) => {
   };
 
   const onSubmit = async(evt)=>{
+    evt.preventDefault()
     let item = items[formData.resource].find(item => item.name === formData.name);
     if (item){
         setErrMessage(`Item with the name ${formData.name} already exists.`)
         return
     }
-    await addItem(evt, formData)
+    await addItem(formData)
     navigate(`/${formData.resource}`)
   }
 
