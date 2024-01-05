@@ -1,12 +1,21 @@
 import React from "react";
 import { Navigate, useParams } from "react-router-dom";
 import { Card, CardBody, CardTitle, CardText } from "reactstrap";
+import NotFound from "./NotFound"
 
-function MenuItem({ items, cantFind }) {
+/**
+ *  Takes in Items (either snacks or drinks)
+ *  Finds item by id in params
+ * 
+ *  Renders Card with name, recipe, description, and serve values.
+ */
+function MenuItem({ items }) {
+  //gets id from url
   const { id } = useParams();
 
+  //finds item in items, if not found renders NotFound component
   let item = items.find(item => item.id === id);
-  if (!item) return <Navigate to="/"/>
+  if (!item) return <NotFound />
 
   return (
     <section>
