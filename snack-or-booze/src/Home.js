@@ -1,7 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Card, CardBody, CardTitle } from "reactstrap";
-
+/**
+ * Takes in entire items object (both snacks and drinks) 
+ * 
+ * Renders Title Page with a count of how many drinks and snacks there are.
+ * 
+ * Counts are also links to respective menus.
+ */
 function Home({items}) {
   return (
     <section className="col-md-8">
