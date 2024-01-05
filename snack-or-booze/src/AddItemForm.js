@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Form, FormGroup, Input, Label, Col, Button, Card, CardTitle } from "reactstrap";
+import { Form, FormGroup, Input, Label, Col, Button, Card, CardTitle, Alert } from "reactstrap";
 import SnackOrBoozeApi from "./Api";
 
-const AddItemForm = ({ addItem}) => {
+const AddItemForm = ({ items, addItem}) => {
   const INITIAL_DATA = {
     name: "",
     description: "",
@@ -13,6 +13,7 @@ const AddItemForm = ({ addItem}) => {
   };
 
   const [formData, setFormData] = useState(INITIAL_DATA);
+  const [errMessage,setErrMessage] = useState()
   const navigate = useNavigate()
 
   const onChange = (evt) => {
@@ -22,6 +23,16 @@ const AddItemForm = ({ addItem}) => {
     });
   };
 
+  const onSubmit = async(evt)=>{
+    let item = items[formData.resource].find(item => item.name === formData.name);
+    if (item){
+        setErrMessage(`Item with the name ${formData.name} already exists.`)
+        return
+    }
+    await addItem(evt, formData)
+    navigate(`/${formData.resource}`)
+  }
+
 
 
   return (
@@ -29,6 +40,8 @@ const AddItemForm = ({ addItem}) => {
         <CardTitle className="font-weight-bold text-center">
             Add Menu Item
         </CardTitle>
+        {errMessage ? <Alert color="danger">{errMessage}</Alert> : ''}
+
     <Form >
       <FormGroup  row>
         <Label for="resource" sm={2}>Type</Label>
@@ -102,10 +115,7 @@ const AddItemForm = ({ addItem}) => {
           />
         </Col>
       </FormGroup>
-      <Button onClick={async (evt)=> {
-            await addItem(evt, formData)
-            navigate(`/${formData.resource}`)
-            }}>
+      <Button onClick={onSubmit}>
                 Submit
       </Button>
 

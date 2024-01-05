@@ -65,7 +65,7 @@ function App() {
             />
 
             <Route exact path="/add"
-              element={<AddItemForm addItem={addItem}/>}
+              element={<AddItemForm addItem={addItem} items={items}/>}
             />
 
             {/** Not Found */}
