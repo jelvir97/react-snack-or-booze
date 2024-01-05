@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Form, FormGroup, Input, Label, Col, Button } from "reactstrap";
+import { Form, FormGroup, Input, Label, Col, Button, Card, CardTitle } from "reactstrap";
 import SnackOrBoozeApi from "./Api";
 
 const AddItemForm = ({ addItem}) => {
@@ -25,8 +25,10 @@ const AddItemForm = ({ addItem}) => {
 
 
   return (
-    <div className="AddItemForm-Container" style={{backgroundColor:"black", width:"50vw", padding:"50px"}}>
-        <h2 style={{marginBottom: '30px'}}>Add Menu Item</h2>
+    <Card style={{width:"56vw", padding:"30px"}}>
+        <CardTitle className="font-weight-bold text-center">
+            Add Menu Item
+        </CardTitle>
     <Form >
       <FormGroup  row>
         <Label for="resource" sm={2}>Type</Label>
@@ -108,7 +110,7 @@ const AddItemForm = ({ addItem}) => {
       </Button>
 
     </Form>
-    </div>
+    </Card>
   );
 };
 
