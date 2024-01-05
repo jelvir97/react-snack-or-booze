@@ -1,12 +1,12 @@
 import React from "react";
-import { Redirect, useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import { Card, CardBody, CardTitle, CardText } from "reactstrap";
 
 function MenuItem({ items, cantFind }) {
   const { id } = useParams();
 
   let item = items.find(item => item.id === id);
-  if (!item) return <Redirect to={cantFind} />;
+  if (!item) return <Navigate to="/"/>
 
   return (
     <section>

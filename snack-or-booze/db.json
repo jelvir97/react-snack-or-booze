@@ -27,6 +27,48 @@
       "description": "Crisp!",
       "recipe": "Open can.",
       "serve": "Immediately."
+    },
+    {
+      "name": "Sangria",
+      "description": "Summery and fruity!",
+      "recipe": "Wine, and fruits.",
+      "serve": "In a stubby glass with ice.",
+      "id": "sangria"
+    },
+    {
+      "name": "Old Fashioned",
+      "description": "Oaky Afterbirth",
+      "recipe": "Whiskey, orange peel, simple syrup, bitters",
+      "serve": "In a whiskey glass a with clear spherical ice.",
+      "id": "old-fashioned"
+    },
+    {
+      "name": "Wine",
+      "description": "Buy it",
+      "recipe": "Grapes",
+      "serve": "In a glass",
+      "id": "wine"
+    },
+    {
+      "name": "Beer",
+      "description": "fizzy buzz",
+      "recipe": "Wheat",
+      "serve": "in a bottle",
+      "id": "beer"
+    },
+    {
+      "name": "Juice",
+      "description": "Fruit blood",
+      "recipe": "Squeeze the fruit",
+      "serve": "With a cookie.",
+      "id": "juice"
+    },
+    {
+      "name": "Water",
+      "description": "Liquid life",
+      "recipe": "Find it anywhere",
+      "serve": "With ice and lemon",
+      "id": "water"
     }
   ],
   "snacks": [
@@ -64,6 +106,34 @@
       "recipe": "Fry'em up!",
       "serve": "Give them to your wife that likes them.",
       "id": "TWlME_5"
+    },
+    {
+      "name": "Cheezeit",
+      "description": "dfgs",
+      "recipe": "sdfg",
+      "serve": "sdfg",
+      "id": "cheezeit"
+    },
+    {
+      "name": "Sugar Balls",
+      "description": "Sugary",
+      "recipe": "Just sugar",
+      "serve": "Sprinkle with sugar.",
+      "id": "sugar-balls"
+    },
+    {
+      "name": "Mac n chees",
+      "description": "Cheesey past",
+      "recipe": "cheese and pasta",
+      "serve": "In bowl",
+      "id": "mac-n-chees"
+    },
+    {
+      "name": "Ice Cream",
+      "description": "Creamy and Icey",
+      "recipe": "Milk and cream and cold",
+      "serve": "With cherry and hot fudge",
+      "id": "ice-cream"
     }
   ]
 }

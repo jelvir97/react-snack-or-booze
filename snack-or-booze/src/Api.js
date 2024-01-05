@@ -19,7 +19,7 @@ class SnackOrBoozeApi {
   }
 
   static async addItem({resource, name, description, recipe, serve}){
-    await axios.post(`${BASE_API_URL}/${resource}`, {name, description, recipe, serve, id: slugify(name)})
+    return await axios.post(`${BASE_API_URL}/${resource}`, {name, description, recipe, serve, id: slugify(name)})
   }
 
 }
