@@ -10,6 +10,11 @@ import {
   ListGroupItem
 } from "reactstrap";
 
+/**
+ * Takes in props for items (i.e. snacks or drinks), title for menu, and resource for the link urls
+ * 
+ * Renders list of items as links to MenuItem components with the info for each item.
+ */
 function Menu({ items, title, resource }) {
   return (
     <section className="col-md-4">
