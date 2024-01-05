@@ -7,11 +7,17 @@ import NavBar from "./NavBar";
 import Menu from "./Menu";
 import MenuItem from "./MenuItem";
 import AddItemForm from "./AddItemForm";
+import NotFound from "./NotFound";
 
 function App() {
+  // if true, loading page is rendered
   const [isLoading, setIsLoading] = useState(true);
+  // items contains arrays of snacks and drinks.
   const [items, setItems] = useState({});
 
+  /**
+   * Gets snacks and drinks from db on first render.
+   */
   useEffect(() => {
     async function getSnacks() {
       let items = await SnackOrBoozeApi.getItems();
@@ -21,9 +27,12 @@ function App() {
     getSnacks();
   }, [items]);
 
+  /**
+   * Sends post request to SnackOrBoozeApi
+   * Updates items to include the newly added snack or drink
+   */
   const addItem = async(formData)=>{
     const {data} = await SnackOrBoozeApi.addItem(formData)
-    console.log(data)
     const newItem = {name:data.name, description:data.description, recipe:data.recipe, serve:data.serve}
     setItems( ()=>{
         return {
@@ -33,6 +42,9 @@ function App() {
     })
   }
 
+  /**
+   * If true, loading page is rendered
+   */
   if (isLoading) {
     return <p>Loading &hellip;</p>;
   }
@@ -69,7 +81,7 @@ function App() {
 
             {/** Not Found */}
             <Route path="*"
-              element={<Navigate to="/" />}
+              element={<NotFound />}
             />
           </Routes>
         </main>
