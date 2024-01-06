@@ -1,8 +1,19 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Form, FormGroup, Input, Label, Col, Button, Card, CardTitle, Alert } from "reactstrap";
-import SnackOrBoozeApi from "./Api";
 
+/**
+ * Takes in items object, and addItem function from App component.
+ * 
+ * Renders form to add a new menu item.
+ * 
+ * Form includes fields for name, resource(type:snack or drink),
+ *                          recipe, description, and serve.
+ * 
+ * Only validations at the moment are that names are unique in each resource.
+ *              Renders error message if there is a conflict
+ * 
+ */
 const AddItemForm = ({ items, addItem}) => {
   const INITIAL_DATA = {
     name: "",
@@ -11,11 +22,12 @@ const AddItemForm = ({ items, addItem}) => {
     serve: "",
     resource:"snacks"
   };
-
+  //Controlled component state and error message state
   const [formData, setFormData] = useState(INITIAL_DATA);
   const [errMessage,setErrMessage] = useState()
   const navigate = useNavigate()
 
+  // Handles changes in form fields
   const onChange = (evt) => {
     setFormData({
       ...formData,
@@ -23,6 +35,7 @@ const AddItemForm = ({ items, addItem}) => {
     });
   };
 
+  //Handles form submit. Validates, calls additem() and respective menu.
   const onSubmit = async(evt)=>{
     evt.preventDefault()
     let item = items[formData.resource].find(item => item.name === formData.name);
