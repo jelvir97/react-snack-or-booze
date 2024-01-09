@@ -21,7 +21,7 @@
   "scripts": {
     "start": "concurrently --kill-others \"npm run start-fe\" \"npm run start-be\"",
     "build": "react-scripts build",
-    "test": "react-scripts test --transformIgnorePatterns 'node_modules/(?!axios)/'",
+    "test": "react-scripts test --transformIgnorePatterns 'node_modules/(?!axios)/' --coverage",
     "eject": "react-scripts eject",
     "start-fe": "react-scripts start",
     "start-be": "json-server --watch db.json --delay 500 --port 5000"

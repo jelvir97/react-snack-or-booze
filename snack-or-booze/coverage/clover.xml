@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1704770183468" clover="3.2.0">
+  <project timestamp="1704770183469" name="All files">
+    <metrics statements="20" coveredstatements="20" conditionals="2" coveredconditionals="2" methods="8" coveredmethods="8" elements="30" coveredelements="30" complexity="0" loc="20" ncloc="20" packages="2" files="5" classes="5"/>
+    <package name="src">
+      <metrics statements="19" coveredstatements="19" conditionals="2" coveredconditionals="2" methods="8" coveredmethods="8"/>
+      <file name="App.js" path="/Users/juan/Desktop/SEC/REACT/react-2/snack-or-booze/src/App.js">
+        <metrics statements="15" coveredstatements="15" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5"/>
+        <line num="14" count="26" type="stmt"/>
+        <line num="16" count="25" type="stmt"/>
+        <line num="21" count="25" type="stmt"/>
+        <line num="23" count="13" type="stmt"/>
+        <line num="24" count="13" type="stmt"/>
+        <line num="25" count="13" type="stmt"/>
+        <line num="27" count="13" type="stmt"/>
+        <line num="34" count="25" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="48" count="25" type="cond" truecount="2" falsecount="0"/>
+        <line num="49" count="13" type="stmt"/>
+        <line num="52" count="12" type="stmt"/>
+      </file>
+      <file name="Home.js" path="/Users/juan/Desktop/SEC/REACT/react-2/snack-or-booze/src/Home.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="12" count="8" type="stmt"/>
+      </file>
+      <file name="NavBar.js" path="/Users/juan/Desktop/SEC/REACT/react-2/snack-or-booze/src/NavBar.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="10" count="15" type="stmt"/>
+      </file>
+      <file name="NotFound.js" path="/Users/juan/Desktop/SEC/REACT/react-2/snack-or-booze/src/NotFound.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.tests">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="_testItems.js" path="/Users/juan/Desktop/SEC/REACT/react-2/snack-or-booze/src/tests/_testItems.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
