@@ -11,7 +11,7 @@ const NotFound = ()=>{
             <CardTitle style={{marginBottom:"25px"}}>
                 Hmm... what your looking for doesn't exist.
             </CardTitle>
-            <Link to="/"><Button color="light">Go Home</Button></Link>
+            <Link to="/">Go Home</Link>
         </Card>
     )
     

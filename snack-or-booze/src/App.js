@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes, } from "react-router-dom";
 import "./App.css";
 import Home from "./Home";
 import SnackOrBoozeApi from "./Api";
@@ -25,7 +25,7 @@ function App() {
       setIsLoading(false);
     }
     getSnacks();
-  }, [items]);
+  }, []);
 
   /**
    * Sends post request to SnackOrBoozeApi
@@ -51,7 +51,7 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      
         <NavBar />
         <main>
           <Routes>
@@ -85,7 +85,7 @@ function App() {
             />
           </Routes>
         </main>
-      </BrowserRouter>
+      
     </div>
   );
 }
